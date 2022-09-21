@@ -19,5 +19,6 @@ jobs:
     - uses: actions/checkout@v1
       name: download codebase
       
-    - uses: dfllok/terraform-plan@v1
-      name: terraform plan
+    - name: terraform plan 
+      uses: dfllok/terraform-plan@v1
+      
