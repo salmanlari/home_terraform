@@ -35,7 +35,7 @@ pub_snet ={
  output "pub-snet-id" {
    value = lookup(module.nw.vpc_pub_snet_id,"pub_sub-1",null).id
  }
-
+/*
 # #SECURITY GROUP MODULE
 
 module "sg" {
@@ -135,3 +135,4 @@ tg_arns              = module.lb.tg_output
 pub_snet = [lookup(module.nw.vpc_pub_snet_id,"pub_sub-1",null).id, lookup(module.nw.vpc_pub_snet_id,"pub_sub-2",null).id]
 
 }
+*/
