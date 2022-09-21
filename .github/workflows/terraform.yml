@@ -20,5 +20,5 @@ jobs:
       name: download codebase
       
     - name: terraform plan 
-      uses: dfllok/terraform-plan@v1
+      uses: dflook/terraform-plan@v1
       
