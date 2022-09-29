@@ -43,11 +43,11 @@ jobs:
       output3: ${{steps.step3.outputs.test}}
     steps:
     - id: step1
-      run: echo "welcome"
+      run: echo "::set-output name=test::welcome"
     - id: step2
-      run: echo "to"
+      run: echo "::set-output name=test::to"
     - id: step3
-      run: echo "india"
+      run: echo "set-output name=test::india"
   job2:
       runs-on: ubuntu-latest
       needs: job1
