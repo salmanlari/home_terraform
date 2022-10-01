@@ -1,0 +1,27 @@
+name: multibase pipeline
+
+on:
+  push: ["master"]
+pull_request:
+
+jobs:
+  job1:
+   runs-on: ubuntu-latest
+  steps:
+    - name: run first job
+    - uses: action/checkout@v1
+    - run: echo "hello"
+        
+      env:
+        GITHUB_TOKEN: ${{secrete.GITHUB_TOKEN}}
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+     - name: run second job
+     - uses: action/checkout@v1
+     - run: echo "world"
+     
+        env:
+          GITHUB_TOKEN: ${{secrete.GITHUB_TOKEN}}
+  
